@@ -1,0 +1,44 @@
+.game-title {
+  font-size: 60px;
+  font-family: 'Cabin Sketch', cursive;
+  text-align: center;
+}
+
+.game-content {
+  display: flex;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  flex-direction: column;
+}
+
+.game-playbutton{
+  background-color: #1c2c45;
+  border-radius: 10em;
+  font-size: 150px;
+  padding: 38px 0 38px 85px;
+  margin: 8% 41.5% 0;
+}
+
+.game-scoreboard {
+  margin-bottom: 30px;
+}
+
+.game-rows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.game-grid {
+  border: 1px solid #000;
+  // background-color: #4bc3b5;
+  margin: 1px;
+  flex: 1;
+  @media screen and (min-width: 768px) {
+    flex: 0.05;
+  }
+}

@@ -1,44 +1,72 @@
-.game-title {
-  font-size: 60px;
-  font-family: 'Cabin Sketch', cursive;
-  text-align: center;
-}
+@import "../../variables.scss";
 
-.game-content {
-  display: flex;
-  font-family: 'Fredoka One', cursive;
-  text-align: center;
-  flex-direction: column;
-}
+.game {
+  &-title {
+    font-size: 60px;
+    font-family: "Cabin Sketch", cursive;
+    text-align: $text-align;
+  }
 
-.game-playbutton{
-  background-color: #1c2c45;
-  border-radius: 10em;
-  font-size: 150px;
-  padding: 38px 0 38px 85px;
-  margin: 8% 41.5% 0;
-}
+  &-content {
+    display: $display-type;
+    font-family: $secondary-fontFamily;
+    text-align: $text-align;
+    flex-direction: column;
+  }
 
-.game-scoreboard {
-  margin-bottom: 30px;
-}
+  &-option {
+    text-align: $text-align;
+    font-family: $secondary-fontFamily;
+    &--choices {
+      border-radius: $border-radius;
+      font-family: $secondary-fontFamily;
+      padding: 5px 10px;
+      margin-left: 10px;
+    }
 
-.game-rows {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    &--playbutton {
+      background-color: $secondary-color;
+      color: $text-color;
+      border-radius: $border-radius;
+      font-size: 150px;
+      padding: 50px 80px 50px 90px;
+      margin: 4% 40% 0;
+    }
+  }
 
-  @media screen and (min-width: 768px) {
-    justify-content: center;
+  &-scoreboard {
+    margin-bottom: 30px;
+  }
+
+  &-rows {
+    display: $display-type;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @media screen and (min-width: $min-width) {
+      justify-content: center;
+    }
+  }
+
+  &-grid {
+    border: $border-size $border-style #000;
+    // background-color: #4bc3b5;
+    margin: 1px;
+    flex: 1;
+    @media screen and (min-width: $min-width) {
+      flex: 0.05;
+    }
   }
 }
 
-.game-grid {
-  border: 1px solid #000;
-  // background-color: #4bc3b5;
-  margin: 1px;
-  flex: 1;
-  @media screen and (min-width: 768px) {
-    flex: 0.05;
-  }
+.easyClass{
+  color: #06FF00;
+}
+
+.medClass{
+  color: #FBCB0A;
+}
+
+.hardClass{
+  color: #FF1818;
 }
